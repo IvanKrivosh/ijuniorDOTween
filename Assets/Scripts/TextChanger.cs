@@ -10,7 +10,7 @@ public class TextChanger : MonoBehaviour
     [SerializeField] private TextSetting _stringToAdd;
     [SerializeField] private TextSetting _stringToEnumeration;
 
-    void Start()
+    private void Start()
     {
         Sequence sequence = DOTween.Sequence();
 
@@ -24,8 +24,8 @@ public class TextChanger : MonoBehaviour
 public class TextSetting
 {
     [SerializeField] private string _text;
-    [SerializeField] private float _dutation;
+    [SerializeField] private float _duration;
 
     public string Text => _text;
-    public float Duration => _dutation;
+    public float Duration => _duration;
 }

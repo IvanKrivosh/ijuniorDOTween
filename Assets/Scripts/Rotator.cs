@@ -1,12 +1,11 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class Rotator : MonoBehaviour
+public class Rotator : AnimationSetting
 {
-    [SerializeField] private Vector3 _rotate;
-    [SerializeField] private float _duration;
+    [SerializeField] private Vector3 _rotate;    
 
-    void Start()
+    private void Start()
     {
         transform.DORotate(_rotate, _duration, RotateMode.WorldAxisAdd)
             .SetLoops(-1)

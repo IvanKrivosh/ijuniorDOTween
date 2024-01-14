@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Mover : MonoBehaviour
+public class Mover : AnimationSetting
 {
-    [SerializeField] private Transform[] _checkPoints;
-    [SerializeField] private float _duration;
+    [SerializeField] private Transform[] _checkPoints;    
 
-    void Start()
+    private void Start()
     {        
         transform.DOPath(_checkPoints.Select(checkPoint => checkPoint.transform.position).ToArray(), _duration)
             .SetLoops(-1)
